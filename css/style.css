@@ -1,0 +1,88 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Weight :
+
+Default 100 
+
+- Line Height : 
+Default : 1 
+
+
+
+--- 02 Colours 
+
+Primary Colour : #e67e22
+
+Tints ( Darker Version )   -
+Shades ( Lighter Version ) -
+Accents ( Contrast Colour ) - 
+Grey - #555
+
+--- 05 Shadows 
+
+
+--- 06 Border Radius
+
+
+--- 07 White Space 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+
+
+/* ############## Global Reset ############## */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%px;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  /* Gray Colour which used to a backgroud for testing & mentor like to use   */
+
+  color: #555;
+}
+
+.test {
+  background-color: red;
+  /* width: 1000px; */
+  padding: 4rem;
+  /* 1 rem = 16px ; 50rem = 800px */
+  max-width: 50rem;
+}
+
+/*
+
+Note: Before you are goiung to build a layout just think which one is easier  
+
+*/
+
+/* Hero Section */
+
+.hero {
+  /* Why div class we need to specify a fixed width */
+  max-width: 130rem;
+  /* Cemteing an element  */
+  margin: 0% auto;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 100%;
+}
