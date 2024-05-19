@@ -18,7 +18,7 @@ Default : 1
 Primary Colour -#e67e22
 
 Tints ( Lighter Version )   -  #fdf2e9
-Shades ( Darker Version ) -
+Shades ( Darker Version ) - #cf711f
 Accents ( Contrast Colour ) - 
 Grey - #555 , #333
 
@@ -104,6 +104,7 @@ Note: Before you are goiung to build a layout just think which one is easier
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
+  font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   /* Come to original state */
@@ -140,4 +141,36 @@ Note: Before you are goiung to build a layout just think which one is easier
 
 .margin-right-sm {
   margin-left: 1.6rem !important ;
+}
+
+/* Delivered - Meals */
+
+.delivered-meals {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  margin-top: 8rem;
+}
+.delivered-imgs {
+  display: flex;
+}
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
