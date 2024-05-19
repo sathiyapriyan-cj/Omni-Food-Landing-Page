@@ -54,7 +54,6 @@ body {
   font-weight: 400;
 
   /* Gray Colour which used to a backgroud for testing & mentor like to use   */
-
   color: #555;
 }
 
@@ -77,7 +76,7 @@ Note: Before you are goiung to build a layout just think which one is easier
 .hero {
   /* Why div class we need to specify a fixed width */
   max-width: 130rem;
-  /* Cemteing an element  */
+  /* Cemteing an element */
   margin: 0% auto;
   display: flex;
   grid-template-columns: 1fr 1fr;
