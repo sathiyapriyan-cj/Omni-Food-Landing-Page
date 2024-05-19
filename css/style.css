@@ -15,12 +15,12 @@ Default : 1
 
 --- 02 Colours 
 
-Primary Colour : #e67e22
+Primary Colour -#e67e22
 
-Tints ( Darker Version )   -
-Shades ( Lighter Version ) -
+Tints ( Lighter Version )   -  #fdf2e9
+Shades ( Darker Version ) -
 Accents ( Contrast Colour ) - 
-Grey - #555
+Grey - #555 , #333
 
 --- 05 Shadows 
 
@@ -49,20 +49,12 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
 
   /* Gray Colour which used to a backgroud for testing & mentor like to use   */
   color: #555;
-}
-
-.test {
-  background-color: red;
-  /* width: 1000px; */
-  padding: 4rem;
-  /* 1 rem = 16px ; 50rem = 800px */
-  max-width: 50rem;
 }
 
 /*
@@ -72,16 +64,80 @@ Note: Before you are goiung to build a layout just think which one is easier
 */
 
 /* Hero Section */
-
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 9.6rem 0;
+}
 .hero {
   /* Why div class we need to specify a fixed width */
   max-width: 130rem;
   /* Cemteing an element */
-  margin: 0% auto;
-  display: flex;
+  margin: 0 auto;
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  /* For consistence exact vale of padding in hero sections */
+  gap: 9.6rem;
+  /* Vertically center in primary box */
+  align-items: center;
 }
 
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  /* Micro Unit You can use px */
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+/* Working on button */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* Come to original state */
+  transition: background-color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+  /* Border is added in outside is not good practice  */
+  /* border: 3px solid #cf711f; */
+  /* Technique to add inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
 .hero-img {
   width: 100%;
+}
+
+.margin-right-sm {
+  margin-left: 1.6rem !important ;
 }
