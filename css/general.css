@@ -23,17 +23,19 @@ Primary Color: #e67e22
 Tints (Lighter Version): #fdf2e9 , #fae5d3
 
 Shades (Darker Version): #cf711f
-Accents (Contrast Color): Grey - #555, #333 , #343a40
+Accents (Contrast Color): Grey -
+#6f6f6f - lightest grey
+
+#555, #333 , #343a40
 
 --- 05 SHADOWS ---
 
-(No information provided)
 
 --- 06 BORDER RADIUS ---
 
 Default: 9px
 small : 1.05
-Medium : 1.2
+Medium : 11px
 --- 07 WHITE SPACE ---
 
 Spacing system (px): 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -63,6 +65,39 @@ body {
 /*
 
 Note: Before you are going to build a layout just think which one is easier  
+/*************************** */
+/* Reuseable Grid , how it works  */
+/*************************** */
+
+/* Center elements  */
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* Reuseable grid  */
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
 
 */
 /*************************** */
@@ -114,7 +149,7 @@ Note: Before you are going to build a layout just think which one is easier
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   /* Come to original state */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-full:link,
@@ -142,40 +177,37 @@ Note: Before you are going to build a layout just think which one is easier
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+.link:hover,
+.link:active {
+  display: inline-block;
+  color: #cf711f;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+/* Helper Class */
+
 .margin-right-sm {
   margin-left: 1.6rem !important ;
 }
-
-/*************************** */
-/* Reuseable Grid , how it works  */
-/*************************** */
-
-/* Center elements  */
-
-.container {
-  /* 1140px */
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important ;
 }
 
-/* Reuseable grid  */
-
-.grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4;
-}
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
+.center-text {
+  text-align: center;
 }
 
-.grid--center-v {
-  align-items: center;
+strong {
+  font-weight: 500;
 }
