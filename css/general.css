@@ -71,7 +71,8 @@ Medium: 11px
 }
 
 html {
-  font-size: 62.5%px;
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -81,6 +82,7 @@ body {
 
   /* Gray Color which used to a background for testing & mentor like to use   */
   color: #555;
+  overflow-x: hidden;
 }
 
 /*
@@ -272,6 +274,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 .list-icon {
   width: 3rem;
